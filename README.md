@@ -3,7 +3,7 @@ AI vision model that inputs presentations as PDF and outputs JSON file to be fed
 
 AI vision model pipeline that analyzes presentation slides and generates structured feedback for judging.
 
-PDF → slide images → vision model (LLaVA via Ollama) → structured evaluation → scoring
+PDF → slide images → vision model (qwen3-vl:2b via Ollama) → structured evaluation → scoring
 
 Step-by-step:
 
@@ -38,7 +38,7 @@ Example code:
 results = analyze_deck("test_slides.pdf")
 print(results)
 
-Example result:
+Example result (inside of returned JSON file):
 [
   {
     "slide": 1,
